@@ -7,15 +7,40 @@
 //
 
 import UIKit
+import Branch
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        Branch.getInstance().initSession(launchOptions: launchOptions) { (params, error) in
+            
+            let mainVC = UIApplication.shared.keyWindow?.rootViewController as? MainViewController
+            
+            if params!["animal"] as? String == "cat" {
+                mainVC?.performSegue(withIdentifier: "cat segue", sender: nil)
+            } else if params!["animal"] as? String == "dog" {
+                mainVC?.performSegue(withIdentifier: "dog segue", sender: nil)
+            }
+            
+            
+            print(params as? [String: AnyObject] ?? {})
+        }
+        
+        return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        Branch.getInstance().application(app, open: url, options: options)
+        return true
+    }
+    
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+        // handler for Universal Links
+        Branch.getInstance().continue(userActivity)
         return true
     }
 

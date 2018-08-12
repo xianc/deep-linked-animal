@@ -8,20 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		99ACBC4720F3CFC200F705E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ACBC4620F3CFC200F705E3 /* AppDelegate.swift */; };
-		99ACBC4920F3CFC200F705E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ACBC4820F3CFC200F705E3 /* ViewController.swift */; };
 		99ACBC4C20F3CFC200F705E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99ACBC4A20F3CFC200F705E3 /* Main.storyboard */; };
 		99ACBC4E20F3CFC300F705E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99ACBC4D20F3CFC300F705E3 /* Assets.xcassets */; };
 		99ACBC5120F3CFC300F705E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99ACBC4F20F3CFC300F705E3 /* LaunchScreen.storyboard */; };
+		99ACBC5920F3D3C300F705E3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ACBC5820F3D3C300F705E3 /* MainViewController.swift */; };
+		99ACBC5B20F3D44700F705E3 /* AnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ACBC5A20F3D44700F705E3 /* AnimalViewController.swift */; };
+		99CECDB220F418760022E32E /* Branch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99CECDB120F418760022E32E /* Branch.framework */; };
+		99CECDB320F418760022E32E /* Branch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 99CECDB120F418760022E32E /* Branch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		99ACBC6020F409C700F705E3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				99CECDB320F418760022E32E /* Branch.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		99ACBC4320F3CFC200F705E3 /* Deep Linked Animals xchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Deep Linked Animals xchen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99ACBC4620F3CFC200F705E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		99ACBC4820F3CFC200F705E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		99ACBC4B20F3CFC200F705E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		99ACBC4D20F3CFC300F705E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99ACBC5020F3CFC300F705E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99ACBC5220F3CFC300F705E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99ACBC5820F3D3C300F705E3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		99ACBC5A20F3D44700F705E3 /* AnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalViewController.swift; sourceTree = "<group>"; };
+		99CECDB120F418760022E32E /* Branch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Branch.framework; sourceTree = "<group>"; };
+		99CECDB420F419E80022E32E /* Deep Linked Animals xchen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Deep Linked Animals xchen.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99CECDB220F418760022E32E /* Branch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +59,7 @@
 		99ACBC3A20F3CFC200F705E3 = {
 			isa = PBXGroup;
 			children = (
+				99CECDB120F418760022E32E /* Branch.framework */,
 				99ACBC4520F3CFC200F705E3 /* Deep Linked Animals xchen */,
 				99ACBC4420F3CFC200F705E3 /* Products */,
 			);
@@ -54,8 +76,10 @@
 		99ACBC4520F3CFC200F705E3 /* Deep Linked Animals xchen */ = {
 			isa = PBXGroup;
 			children = (
+				99CECDB420F419E80022E32E /* Deep Linked Animals xchen.entitlements */,
+				99ACBC5820F3D3C300F705E3 /* MainViewController.swift */,
+				99ACBC5A20F3D44700F705E3 /* AnimalViewController.swift */,
 				99ACBC4620F3CFC200F705E3 /* AppDelegate.swift */,
-				99ACBC4820F3CFC200F705E3 /* ViewController.swift */,
 				99ACBC4A20F3CFC200F705E3 /* Main.storyboard */,
 				99ACBC4D20F3CFC300F705E3 /* Assets.xcassets */,
 				99ACBC4F20F3CFC300F705E3 /* LaunchScreen.storyboard */,
@@ -74,6 +98,7 @@
 				99ACBC3F20F3CFC200F705E3 /* Sources */,
 				99ACBC4020F3CFC200F705E3 /* Frameworks */,
 				99ACBC4120F3CFC200F705E3 /* Resources */,
+				99ACBC6020F409C700F705E3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +121,11 @@
 				TargetAttributes = {
 					99ACBC4220F3CFC200F705E3 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -135,8 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99ACBC4920F3CFC200F705E3 /* ViewController.swift in Sources */,
 				99ACBC4720F3CFC200F705E3 /* AppDelegate.swift in Sources */,
+				99ACBC5B20F3D44700F705E3 /* AnimalViewController.swift in Sources */,
+				99ACBC5920F3D3C300F705E3 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,8 +311,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Deep Linked Animals xchen/Deep Linked Animals xchen.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R63EM248DP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Deep\\ Linked\\ Animals\\ xchen",
+					"$(PROJECT_DIR)/Deep\\ Linked\\ Animals\\ xchen",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Deep Linked Animals xchen/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -298,8 +336,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Deep Linked Animals xchen/Deep Linked Animals xchen.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R63EM248DP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Deep\\ Linked\\ Animals\\ xchen",
+					"$(PROJECT_DIR)/Deep\\ Linked\\ Animals\\ xchen",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Deep Linked Animals xchen/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
